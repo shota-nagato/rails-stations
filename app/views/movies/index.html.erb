@@ -1,0 +1,8 @@
+<% if @movies.present? %>
+  <% @movies.each do |movie| %>
+    <%= movie.name %>
+    <%= image_tag movie.image_url %>
+  <% end %>
+<% else %>
+  <p>movieは存在しません</p>
+<% end %>
