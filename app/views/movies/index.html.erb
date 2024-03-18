@@ -1,8 +1,7 @@
 <% if @movies.present? %>
-  <% @movies.each do |movie| %>
-    <%= movie.name %>
-    <%= image_tag movie.image_url %>
-  <% end %>
+  <div class="movies">
+    <%= render @movies %>
+  </div>
 <% else %>
   <p>movieは存在しません</p>
 <% end %>

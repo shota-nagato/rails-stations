@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+  border-radius: 5px;
+}
+
+.movie .content {
+  padding: 0 8px;
+}
