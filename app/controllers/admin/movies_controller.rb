@@ -1,5 +1,5 @@
 class Admin::MoviesController < ApplicationController
-  before_action :set_movie, only: [:edit, :update]
+  before_action :set_movie, only: [:edit, :update, :destroy]
   def index
     @movies = Movie.order(created_at: :desc)
   end
@@ -26,6 +26,11 @@ class Admin::MoviesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @movie.destroy!
+    redirect_to admin_movies_path
   end
 
   private
