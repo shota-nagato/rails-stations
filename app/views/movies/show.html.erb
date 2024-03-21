@@ -1,0 +1,11 @@
+<%= @movie.name %>
+<%= @movie.year %>
+<%= @movie.description %>
+<%= status_text(@movie) %>
+<%= image_tag @movie.image_url %>
+
+
+<% @schedules.each do |schedule| %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>

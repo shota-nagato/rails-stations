@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+  has_many :schedules
+
   validates :name, uniqueness: true
 
   scope :keyword, -> (keyword) { where('name LIKE ? or description LIKE ?', "%#{keyword}%", "%#{keyword}%") }
